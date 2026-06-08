@@ -196,7 +196,7 @@ function startGame() {
 function setDirection(x, y) {
   if (!isRunning) return;
   if (x === -direction.x && y === -direction.y) return;
-  if (x === direction.x && y === direction.y) return;
+  if (x === nextDirection.x && y === nextDirection.y) return;
   nextDirection = { x, y };
 }
 
@@ -226,10 +226,11 @@ canvas.addEventListener('touchmove', (e) => {
 
 canvas.addEventListener('touchend', (e) => {
   e.preventDefault();
+  const t = e.changedTouches[0];
   if (!touchStartX || !touchStartY) return;
   const rect = canvas.getBoundingClientRect();
-  const endX = touchStartX;
-  const endY = touchStartY;
+  const endX = t.clientX;
+  const endY = t.clientY;
   touchStartX = 0;
   touchStartY = 0;
 
