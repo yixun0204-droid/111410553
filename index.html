@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="description" content="經典貪吃蛇遊戲 - PWA 版本">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+  <title>貪吃蛇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🐍 貪吃蛇</h1>
+      <div id="score-board">
+        <span>分數: <strong id="score">0</strong></span>
+        <span>最高: <strong id="high-score">0</strong></span>
+      </div>
+    </header>
+    <main>
+      <canvas id="game-canvas" width="400" height="400"></canvas>
+      <div id="overlay" class="hidden">
+        <div id="overlay-content">
+          <h2 id="overlay-title">貪吃蛇</h2>
+          <p id="overlay-message">按下方按鈕開始遊戲</p>
+          <button id="start-btn">開始遊戲</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>方向鍵 / WASD / 滑鼠滑動 控制方向</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

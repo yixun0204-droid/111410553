@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+#score-board {
+  display: flex;
+  justify-content: space-between;
+  background: #16213e;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+#score-board strong {
+  color: #e94560;
+  font-size: 1.2rem;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 400px;
+}
+
+#game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #0f3460;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+}
+
+#overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#overlay-content {
+  text-align: center;
+  padding: 32px;
+}
+
+#overlay-title {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #e94560;
+}
+
+#overlay-message {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+#start-btn {
+  background: #e94560;
+  color: #fff;
+  border: none;
+  padding: 14px 48px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#start-btn:hover {
+  background: #c73650;
+  transform: scale(1.05);
+}
+
+#start-btn:active {
+  transform: scale(0.95);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
